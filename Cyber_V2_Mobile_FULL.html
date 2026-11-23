@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Cyber Awareness Challenge V2</title>
+<style>
+body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#020617;color:#fff;overflow:hidden}#bg{position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,#00ffaa22,transparent 30%),radial-gradient(circle at 80% 20%,#00aaff22,transparent 30%),linear-gradient(135deg,#020617,#0f172a)}#grid{position:fixed;inset:0;background-image:linear-gradient(#00ffaa12 1px,transparent 1px),linear-gradient(90deg,#00ffaa12 1px,transparent 1px);background-size:32px 32px}.wrap{position:relative;z-index:2;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}.card{max-width:850px;width:100%;background:rgba(255,255,255,.96);color:#0f172a;border-radius:20px;padding:24px;box-shadow:0 0 40px #00ffaa33}.alert{text-align:center}.terminal{background:#000;color:#00ff88;border-radius:12px;padding:20px;font-family:Consolas,monospace;line-height:1.8;text-align:left}.bar{height:10px;background:#1e293b;border-radius:10px;overflow:hidden;margin:20px 0}.fill{height:100%;width:100%;background:linear-gradient(90deg,#00ffaa,#00aaff);animation:pulse 1.2s infinite}@keyframes pulse{50%{opacity:.5}}.hidden{display:none}.badge{display:inline-block;background:#dcfce7;color:#166534;padding:8px 14px;border-radius:999px;font-weight:700}.cake{font-size:64px;text-align:center}@media(max-width:600px){.card{padding:18px}h1{font-size:1.7rem}h2{font-size:1.2rem}.terminal{font-size:.9rem}}</style>
+</head>
+<body>
+<div id="bg"></div><div id="grid"></div>
+<div class="wrap">
+<div id="s1" class="card alert">
+<h1>⚠ SECURITY ALERT</h1>
+<div class="terminal">
+<div>> QR code detected</div>
+<div>> Initializing security assessment...</div>
+<div>> Camera access: OK</div>
+<div>> Network connection: OK</div>
+<div>> Curiosity level: VERY HIGH 😄</div>
+<div id="status">> Analyzing potential security risks...</div>
+</div>
+<div class="bar"><div class="fill"></div></div>
+</div>
+<div id="s2" class="card hidden">
+<h1>😊 Congratulations!</h1>
+<h2>You have successfully completed a Cyber Awareness Challenge</h2>
+<p>You have just experienced a harmless demonstration of how easily curiosity can be triggered by a simple QR code.</p>
+<p>In real life, attackers use the same techniques to encourage users to click links, open attachments or reveal sensitive information.</p>
+<hr>
+<h2>Quick Reminders</h2>
+<p>🔐 Think before you click</p>
+<p>📧 Verify unexpected emails</p>
+<p>📱 Be cautious with unknown QR codes</p>
+<p>🚨 Report suspicious messages when in doubt</p>
+<p>✅ Trust, but verify</p>
+<p><span class="badge">🚀 Cyber Awareness Certified</span></p>
+<p><strong>Cyber awareness level:</strong> ██████████ 100%<br><strong>Phishing resistance:</strong> IMPROVED ✅<br><strong>Threat detected:</strong> EMPLOYEE LEAVING ALSTOM<br><strong>Recommended mitigation:</strong> OFFER CAKE 🍰</p>
+<hr><div class="cake">🍰</div>
+<h2>Farewell Cake Break</h2>
+<p>📅 <strong>09 December 2026</strong><br>🕑 <strong>14:00</strong><br>📍 <strong>Lodalen</strong></p>
+<p>Thank you for helping keep our environment secure every day.</p>
+<p><strong>Brice Sanchez</strong></p>
+</div></div>
+<script>
+const msgs=['> Analyzing potential security risks...','> Checking device exposure...','> Reviewing suspicious activity...','> Calculating curiosity score...','> Finalizing assessment...'];
+let i=0;const el=document.getElementById('status');
+const t=setInterval(()=>{i++;if(i<msgs.length)el.textContent=msgs[i];},1000);
+setTimeout(()=>{clearInterval(t);document.getElementById('s1').classList.add('hidden');document.getElementById('s2').classList.remove('hidden');},5500);
+</script>
+</body></html>
